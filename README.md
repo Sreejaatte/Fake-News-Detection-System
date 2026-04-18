@@ -20,6 +20,10 @@ Problem Statement
 
 Fake news detection is a critical challenge in modern information systems. This project aims to classify news articles as **FAKE** or **REAL** using machine learning models trained on textual data.
 
+System Architecture
+
+Client Request → FastAPI → Preprocessing → TF-IDF Vectorization → ML Model → Prediction → Response
+
 Features
 
 - End-to-end NLP pipeline (preprocessing → training → inference)
@@ -44,3 +48,40 @@ Tech Stack
 - **Deployment:** Docker  
 - **CI/CD:** GitHub Actions  
 - **Tools:** Git, Linux  
+
+Project Structure
+
+app/
+api/
+core/
+models/
+services/
+schemas/
+
+How to Run Locally
+
+git clone https://github.com/your-username/fake-news-detection-ml-api
+cd fake-news-detection-ml-api
+
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+
+Run with Docker
+docker build -t fake-news-api .
+docker run -p 8000:8000 fake-news-api
+API Usage
+Endpoint
+
+POST /api/v1/predict
+
+Request
+{
+"text": "Breaking news content..."
+}
+Response
+{
+"prediction": "FAKE"
+}
+
+Testing
+pytest
