@@ -1,87 +1,91 @@
-#Fake-News-Detection-System
-Production-ready NLP-based Fake News Detection API using FastAPI, TF-IDF, and ML models with Docker and CI/CD
+# 📊 Fake News Detection System
 
-Fake News Detection ML API
+## 🚀 Overview
 
-A production-ready machine learning system for detecting fake news using Natural Language Processing (NLP) techniques. The system is designed with a scalable architecture and deployed as a REST API for real-time inference.
+Misinformation spreads rapidly across digital platforms, impacting public opinion and decision-making. This project focuses on building a machine learning-based system to **automatically classify news as real or fake**, enabling reliable content filtering and supporting trustworthy information ecosystems.
 
-Overview
+---
 
-This project implements an end-to-end machine learning pipeline for fake news classification. It covers the complete lifecycle:
+## 🎯 Objectives
 
-- Data preprocessing and feature engineering
-- Model training and evaluation
-- API development for inference
-- Containerization and CI/CD integration
+* Detect fake news using machine learning and NLP techniques
+* Process and analyze large textual datasets
+* Build a scalable system for real-time predictions
 
-The system is designed to simulate real-world ML deployment scenarios.
+---
 
-Problem Statement
+## 📂 Dataset
 
-Fake news detection is a critical challenge in modern information systems. This project aims to classify news articles as **FAKE** or **REAL** using machine learning models trained on textual data.
+* Source: Kaggle (Fake News Dataset)
+* Description: Contains labeled news articles with text content and classification (real/fake)
 
-System Architecture
+---
 
-Client Request → FastAPI → Preprocessing → TF-IDF Vectorization → ML Model → Prediction → Response
+## 🔍 Exploratory Data Analysis (EDA)
 
-Features
+* Identified imbalance between real and fake news classes
+* Analyzed text length, word frequency, and distribution patterns
+* Visualized common terms using word clouds and frequency plots
 
-- End-to-end NLP pipeline (preprocessing → training → inference)
-- REST API for real-time predictions
-- Modular and scalable project structure
-- Dockerized deployment
-- CI/CD pipeline with automated testing
-- Logging and error handling for production readiness
+---
 
-Model Details
+## 🤖 Model Development
 
-- Feature Extraction: TF-IDF Vectorization  
-- Algorithms: Logistic Regression / Naive Bayes / Linear Models  
-- Evaluation Metrics: Accuracy, Precision, Recall  
-- Achieved Accuracy: ~92%  
+* Algorithms used: Logistic Regression, Naive Bayes
+* Feature engineering: TF-IDF vectorization, text preprocessing (stopword removal, stemming)
+* Model selection based on accuracy and generalization performance
 
-Tech Stack
+---
 
-- **Language:** Python  
-- **ML Libraries:** Scikit-learn, Pandas, NumPy  
-- **API Framework:** FastAPI  
-- **Deployment:** Docker  
-- **CI/CD:** GitHub Actions  
-- **Tools:** Git, Linux  
+## 📊 Evaluation Metrics
 
-Project Structure
+* Accuracy
+* Precision / Recall
+* F1 Score
+* ROC-AUC
 
-app/
-api/
-core/
-models/
-services/
-schemas/
+---
 
-How to Run Locally
+## 📈 Results & Insights
 
-git clone https://github.com/your-username/fake-news-detection-ml-api
-cd fake-news-detection-ml-api
+* Achieved high classification accuracy (~92%)
+* Text patterns and keyword distributions strongly influence predictions
+* NLP preprocessing significantly improves model performance
 
+---
+
+## 💡 Business Impact
+
+* Enables automated content moderation systems
+* Helps reduce spread of misinformation
+* Supports media platforms in maintaining content credibility
+
+---
+
+## 🛠️ Tech Stack
+
+Python, Pandas, NumPy, Scikit-learn, NLP (TF-IDF), Matplotlib, Seaborn
+
+---
+
+## ⚙️ Setup
+
+```bash
+git clone <repo>
+cd <repo>
 pip install -r requirements.txt
-uvicorn app.main:app --reload
+```
 
-Run with Docker
-docker build -t fake-news-api .
-docker run -p 8000:8000 fake-news-api
-API Usage
-Endpoint
+---
 
-POST /api/v1/predict
+## 🔮 Future Improvements
 
-Request
-{
-"text": "Breaking news content..."
-}
-Response
-{
-"prediction": "FAKE"
-}
+* Deploy model using FastAPI for real-time inference
+* Use deep learning models (LSTM, BERT)
+* Integrate with live news APIs
 
-Testing
-pytest
+---
+
+## 👤 Author
+
+Sreeja Reddy
